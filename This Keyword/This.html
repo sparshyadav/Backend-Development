@@ -84,7 +84,17 @@
         console.log(this.age);
     }
 
-   
+    getAge.apply(obj7, arr);
+
+    //Method 3 -> Bind Method
+    // function foo2(cb){
+    //     cb();
+    // }
+
+    // foo2(getAge);
+
+    let xyz = getAge.bind(obj);
+    console.log(xyz()); //Homework 2 
 
 </script>
 
