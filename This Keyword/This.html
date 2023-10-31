@@ -70,31 +70,39 @@
     // getAge.call(obj6, "Udhav");
 
     //Method 2 -> Apply Method
-    let arr = ["Cricker", "Football", "Hockey"];
+    // let arr = ["Cricker", "Football", "Hockey"];
 
-    // function getAge(a, b, c){ //this is for when you know the number of variables
-    //     console.log(a, b, c);
-    //     console.log(this.name);
+    // // function getAge(a, b, c){ //this is for when you know the number of variables
+    // //     console.log(a, b, c);
+    // //     console.log(this.name);
+    // //     console.log(this.age);
+    // // }
+
+    // function getAge(...args) { //this is for when you dont know the number of variables, we use rest operator
+    //     // console.log(args[0], args)[1], args[2];
+    //     // console.log(this.name);
     //     console.log(this.age);
     // }
 
-    function getAge(...args) { //this is for when you dont know the number of variables, we use rest operator
-        // console.log(args[0], args)[1], args[2];
-        // console.log(this.name);
-        console.log(this.age);
+    // getAge.apply(obj7, arr);
+
+    // //Method 3 -> Bind Method
+    // // function foo2(cb){
+    // //     cb();
+    // // }
+
+    // // foo2(getAge);
+
+    // let xyz = getAge.bind(obj);
+    // console.log(xyz()); //Homework 2 
+
+    //Method 4 -> New Keyword
+    function fun(name, age){
+        this.name=name;
+        this.age=age;
     }
-
-    getAge.apply(obj7, arr);
-
-    //Method 3 -> Bind Method
-    // function foo2(cb){
-    //     cb();
-    // }
-
-    // foo2(getAge);
-
-    let xyz = getAge.bind(obj);
-    console.log(xyz()); //Homework 2 
+    let obj=new fun("Sparsh", 21);
+    console.log(obj);
 
 </script>
 
