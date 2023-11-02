@@ -1,12 +1,13 @@
 console.log("Running Lib2");
-let lib1=require("./lib1");
 
-function dog(){
+let lib1 = require("./lib1");
+
+function dog() {
     console.log("Dog Says Bark");
 }
 
-let food="Pedigree";
+let food = "Pedigree";
 
-module.exports={
+module.exports = {
     dog, food
 }
