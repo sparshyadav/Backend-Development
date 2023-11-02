@@ -8,5 +8,10 @@ function add(a, b){
 // const _add = add;
 // export { _add as add };
 
-module.exports.x=x; //previous method
-module.exports.add=add;
+// module.exports.x=x; //previous method
+// module.exports.add=add;
+
+module.exports={  //Another way to export values
+    x,  //key-value pair of both named x
+    add  //key-value pair of both named add
+}
