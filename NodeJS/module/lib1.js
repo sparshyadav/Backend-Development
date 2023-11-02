@@ -9,4 +9,4 @@ function add(a, b){
 // export { _add as add };
 
 module.exports.x=x; //previous method
-module.exports.add.add;
+module.exports.add=add;
