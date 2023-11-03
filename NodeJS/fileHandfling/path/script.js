@@ -1,3 +1,3 @@
-let path=require("path");
-let filePath=path.join("a", "b", "c");
+let path = require("path");
+let filePath = path.join("a", "b", "c");
 console.log(filePath);
