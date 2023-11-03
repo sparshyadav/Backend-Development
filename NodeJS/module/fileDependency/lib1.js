@@ -8,6 +8,10 @@ function cat() {
 
 let food = "Fish";
 
-module.exports = {
-    cat, food
-}
+module.exports.cat=cat;
+module.exports.food=food;
+module.exports.lib2=lib2;
+
+// module.exports = {
+//     cat, food, lib2 //Sending lib2 for circular dependency
+// }
