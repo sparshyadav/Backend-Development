@@ -6,6 +6,7 @@ let fileName = "data.txt";
 let filePath = path.join(__dirname, "Data", fileName);
 // console.log(filePath);
 
+//Write
 // fs.writeFile(
 //     "./fileHandfling/Data/data.txt",
 //     "Hello World!",
@@ -34,6 +35,7 @@ let filePath = path.join(__dirname, "Data", fileName);
 //     }
 // )
 
+//Remove
 // fs.rm(
 //     filePath,
 //     {
@@ -46,12 +48,14 @@ let filePath = path.join(__dirname, "Data", fileName);
 //     }
 // )
 
+//Read
 fs.readFile(
     filePath,
-    (err,data)=>{
-        if(err){
+    (err, data) => {
+        if (err) {
             console.log("This is an Error");
-        }else{
+        }
+        else {
             console.log(data.toString());
         }
     }
