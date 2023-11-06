@@ -28,9 +28,19 @@ function read(file){
 
 read(filePath1).then((data1)=>{
     // console.log(data1);
+    data1=data1.split("\r\n");
     read(filePath2).then((data2)=>{
-        // console.log(data2);
-        let res=data1+data2;
+        data2=data2.split("\r\n");
+        let res=[...data1, ...data2];
+        // console.log(res);
+        res=res.map((element)=>(
+            parseInt(element)
+        ))
         console.log(res);
+    //     // console.log(data2);
+    //     let res=data1+data2;
+    //     // console.log(res);
+    //     res=res.parseInt(split("\r\n"));
+    //     console.log(res);
     })
 })
