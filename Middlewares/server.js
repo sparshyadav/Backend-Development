@@ -1,11 +1,23 @@
 const express = require("express");
 const app = express();
 
-function m1(res, res, next) {
+// app.use(m2);
+app.use(m1);
+app.use(m3);
+app.use(m2);
+
+function m1(req, res, next) {
     console.log("Running Middleware 1");
     next();
 }
-app.use(m1);
+function m2(req, res, next) {
+    console.log("Running MIddleware 2");
+    next();
+}
+function m3(req, res, next) {
+    console.log("Running Middleware 3");
+    next();
+}
 
 app.get("/about", (req, res) => {
     console.log("Running /about");
