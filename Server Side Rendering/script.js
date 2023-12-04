@@ -1,33 +1,33 @@
-const express=require("express");
+const express = require("express");
 
-let app=express();
+let app = express();
 
 app.set('view engine', 'hbs');
 
-let todos=[
-    {name:"Cricket", id:1},
-    {name:"Rugby", id:2},
-    {name:"Football", id:3},
-    {name:"Hockey", id:4}
+let todos = [
+    { name: "Cricket", id: 1 },
+    { name: "Rugby", id: 2 },
+    { name: "Football", id: 3 },
+    { name: "Hockey", id: 4 }
 ]
 
-app.get("/home", (req, res)=>{
+app.get("/home", (req, res) => {
     res.render("home");
 });
 
-app.get("/about", (req, res)=>{
+app.get("/about", (req, res) => {
     res.render("about", {
         name: "Sparsh Yadav",
-        age: 21  
+        age: 21
     });
 });
 
-app.get("/todos", (req, res)=>{
+app.get("/todos", (req, res) => {
     res.render("todos", {
-        todos:todos
+        todos: todos
     });
 })
 
-app.listen(3333, ()=>{
+app.listen(3333, () => {
     console.log("Server Started");
 });
