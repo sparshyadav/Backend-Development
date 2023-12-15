@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const { getAllPost, postAddPost, getOnePost, deleteOnePost, putUpdatePost } = require("../controllers/post");
 
 router.get("/", getAllPost);
 router.post("/", postAddPost);
