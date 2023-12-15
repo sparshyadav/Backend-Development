@@ -5,8 +5,16 @@ module.exports.getAllPost = async (req, res) => {
     res.json(allPost);
 }
 
-module.exports.postAddPost = (req, res) => {
+module.exports.postAddPost = async (req, res) => {
+    const { postName, imageUrl, caption } = req.body;
+    let newPost = new Post({
+        postName: postName,
+        imageUrl: imageUrl,
+        caption: caption
+    });
 
+    await newPost.save();
+    res.send("Post Added");
 }
 
 module.exports.getOnePost = (req, res) => {
