@@ -8,6 +8,7 @@ app.use(express.json());
 
 app.set('view engine', 'hbs');
 
+app.use("/posts", require("./routes/post.js"));
 
 app.listen(3334, () => {
     console.log("Server Started");
