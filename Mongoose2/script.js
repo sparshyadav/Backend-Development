@@ -13,13 +13,8 @@ app.use("/posts", require("./routes/post.js"));
 
 mongoose.connect("mongodb://127.0.0.1:27017/g26")
 .then(()=>{
-    // try{
-        app.listen(3334, () => {
-            console.log("Server Started");
-        })
-    // }
-    // catch(error){
-    //     console.log("An Error Occured");
-    // }
+    app.listen(3334, () => {
+        console.log("Server Started");
+    })
 })
 

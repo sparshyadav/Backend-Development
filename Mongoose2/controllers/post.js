@@ -1,5 +1,8 @@
-module.exports.getAllPost=(req, res)=>{
+const Post=require("../model/post");
 
+module.exports.getAllPost=(req, res)=>{
+    let allPost=Post.find({});
+    res.json(allPost);
 }
 
 module.exports.postAddPost=(req, res)=>{
