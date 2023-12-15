@@ -12,9 +12,9 @@ app.set('view engine', 'hbs');
 app.use("/posts", require("./routes/post.js"));
 
 mongoose.connect("mongodb://127.0.0.1:27017/g26")
-.then(()=>{
-    app.listen(3334, () => {
-        console.log("Server Started");
+    .then(() => {
+        app.listen(3334, () => {
+            console.log("Server Started");
+        })
     })
-})
 

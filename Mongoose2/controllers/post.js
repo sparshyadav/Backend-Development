@@ -18,7 +18,11 @@ module.exports.postAddPost = async (req, res) => {
 }
 
 module.exports.getOnePost = (req, res) => {
+    const id = req.params;
 
+    let post = Post.find({ _id: id });
+
+    res.json(post[0]);
 }
 
 module.exports.deleteOnePost = (req, res) => {
